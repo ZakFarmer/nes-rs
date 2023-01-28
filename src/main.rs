@@ -1,0 +1,12 @@
+use cpu::CPU;
+
+mod cpu;
+
+fn main() {
+    let mut cpu: CPU = CPU::new();
+
+    cpu.interpret(vec![0xA9, 0x05, 0x00]);
+    cpu.interpret(vec![0xA9, 0x00, 0x00]);
+    cpu.interpret(vec![0xA9, 0xFF, 0x00]);
+    cpu.interpret(vec![0xA9, 0x05, 0xAA, 0x00]);
+}
